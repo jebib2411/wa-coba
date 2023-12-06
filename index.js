@@ -9,7 +9,6 @@ const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
     args: ['--no-sandbox'],
-    headless: true, // Set to false if you want to run in a headed mode for debugging
   },
 });
 

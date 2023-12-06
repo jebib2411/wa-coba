@@ -8,9 +8,10 @@ require("dotenv").config(); // Load environment variables from .env file
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
-    args: ['--no-sandbox'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
 });
+
 
 // Set up login event handling
 loginHandler.setupLogin(client);
